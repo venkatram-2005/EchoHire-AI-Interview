@@ -11,7 +11,14 @@ interface Feedback {
   areasForImprovement: string[];
   finalAssessment: string;
   createdAt: string;
+  questionsAnalysis?: Array<{
+    question: string;
+    userResponse: string;
+    score: number;
+    improvementSuggestion: string;
+  }>; // Add questionsAnalysis here
 }
+
 
 interface Interview {
   id: string;
