@@ -79,14 +79,15 @@ export async function signIn(params: SignInParams) {
       };
 
     await setSessionCookie(idToken);
-  } catch (error: any) {
-    console.log("");
-
+  } 
+  catch (error) {
+    console.error("Error during sign in:", error);
     return {
       success: false,
       message: "Failed to log into account. Please try again.",
     };
   }
+  
 }
 
 // Sign out user by clearing the session cookie
