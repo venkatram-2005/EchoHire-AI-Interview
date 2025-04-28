@@ -93,27 +93,25 @@ const Feedback = async ({ params }: RouteParams) => {
       </div>
 
       <div className="flex flex-col gap-5">
-        <h3 className="text-xl font-semibold">Questions Analysis</h3>
+        <h3>Questions Analysis</h3>
         {feedback?.questionsAnalysis?.map((analysis, index) => (
-            <div
-            key={index}
-            className="bg-white shadow-lg p-4 rounded-lg border-l-4 border-primary-200"
-            >
-            <p className="font-semibold text-lg">
-                Question: <span className="text-primary-200">{analysis.question}</span>
+          <div key={index}>
+            <p>
+              <strong>Question {index + 1}:</strong> <br /> <span>{analysis.question}</span>
             </p>
-            <p className="mt-2 text-sm">
-                User's Response: <span className="italic text-gray-700">{analysis.userResponse}</span>
+            <p>
+              <strong>User's Response:</strong> <span>{analysis.userResponse}</span>
             </p>
             <p className="mt-2">
-                Score: <span className="font-bold text-green-500">{analysis.score}/10</span>
+              <strong>Score:</strong> <span>{analysis.score}/10</span>
             </p>
-            <p className="mt-2">
-                Improvement Suggestion: <span className="text-gray-600">{analysis.improvementSuggestion}</span>
+            <p>
+              <strong>Improvement Suggestion:</strong> <span>{analysis.improvementSuggestion}</span>
             </p>
-            </div>
+          </div>
         ))}
-        </div> 
+      </div>
+
 
 
       <div className="buttons">
