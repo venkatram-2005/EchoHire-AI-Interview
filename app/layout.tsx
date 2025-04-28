@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+    <meta name="google-site-verification" content="74G8nRsYV1eK2nl0oqIzCxDLPhzDE2GrUC-JUBQc0qg" />
       <body
         className={`${monaSans.className} antialiased pattern`}
       >
